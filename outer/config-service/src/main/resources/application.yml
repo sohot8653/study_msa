@@ -11,5 +11,4 @@ spring:
           uri: https://github.com/sohot8653/st-framework.git
           username: sohot8653
           password: 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
-          search-paths: outer/config-file/**
           default-label: master
