@@ -29,6 +29,12 @@ greeting:
 logging:
   level:
     com.example.userservice: DEBUG
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans
 
 #token:
 #  expiration_time: 86400000

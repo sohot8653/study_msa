@@ -13,4 +13,4 @@ spring:
           password: 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
           default-label: master
           search-paths:
-          - outer/config-file
+          - outer/config-service/config-file
