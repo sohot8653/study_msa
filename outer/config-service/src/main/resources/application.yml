@@ -4,13 +4,23 @@ server:
 spring:
   application:
     name: config-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       server:
         git:
           uri: https://github.com/sohot8653/st-framework.git
           username: sohot8653
-          password: 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
+          password: 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
           default-label: master
           search-paths:
           - outer/config-service/config-file
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
