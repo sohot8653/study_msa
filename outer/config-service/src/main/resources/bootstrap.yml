@@ -1,2 +1,6 @@
 encrypt:
-  key: abcdefghijklmnopqrstuvwxyz02123456789
+#  key: abcdefghijklmnopqrstuvwxyz02123456789
+  key-store:
+    location: file:///D:/workspace/st-framework/keystore/apiEncryptionKey.jks
+    password: stam1201!
+    alias: apiEncryptionKey
