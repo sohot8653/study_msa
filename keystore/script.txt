@@ -1,0 +1,9 @@
+keytool -genkeypair -alias apiEncryptionKey -keyalg RSA -dname "CN=stam, OU=API Development, O=stam.kr L=Seoul, C=KR" -keypass "stam1201!" -keystore apiEncryptionKey.jks -storepass "stam1201!"
+
+keytool -list -keystore apiEncryptionKey.jks -v
+
+keytool -export -alias apiEncryptionKey -keystore apiEncryptionKey.jks -rfc -file trustServer.cer
+
+keytool -import -alias trustServer -file trustServer.cer -keystore publicKey.jks
+
+keytool -list -keystore publicKey.jks -v
