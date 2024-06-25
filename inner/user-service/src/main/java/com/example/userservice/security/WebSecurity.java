@@ -30,10 +30,11 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 //        http.authorizeRequests().antMatchers("/user/**").permitAll();
         http.authorizeRequests().antMatchers("/actuator/**").permitAll();
-        http.authorizeRequests().antMatchers("/**")
-                .hasIpAddress("210.100.201.205")
-                .and()
-                .addFilter(getAuthentionFilter());
+        http.addFilter(getAuthentionFilter());
+//        http.authorizeRequests().antMatchers("/**")
+//                .hasIpAddress("210.100.201.205")
+//                .and()
+//                .addFilter(getAuthentionFilter());
 
         http.headers().frameOptions().disable();
     }
