@@ -11,7 +11,10 @@ import java.util.Date;
 @Entity
 @Table(name="orders")
 public class OrderEntity implements Serializable {
-    @Id
+	
+	private static final long serialVersionUID = -5121292661568098265L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -20,7 +23,7 @@ public class OrderEntity implements Serializable {
     @Column(nullable = false)
     private Integer qty;
     @Column(nullable = false)
-    private Integer unit;
+    private Integer unitPrice;
     @Column(nullable = false)
     private Integer totalPrice;
 
