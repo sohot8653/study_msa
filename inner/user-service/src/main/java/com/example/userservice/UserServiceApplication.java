@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.userservice.error.FeignErrorDecoder;
+
 import feign.Logger;
 
 @SpringBootApplication
@@ -34,5 +36,10 @@ public class UserServiceApplication {
     @Bean
     Logger.Level feignLoggerLevel() {
     	return Logger.Level.FULL;
+    }
+    
+    @Bean
+    FeignErrorDecoder getFeignErrorDecoder() {
+    	return new FeignErrorDecoder();
     }
 }
