@@ -15,7 +15,7 @@ spring:
     config:
       server:
         native:
-          searchLocations: classpath:/config-file
+          search-locations: classpath:/config-file
 #        git:
 #          uri: https://github.com/sohot8653/st-framework.git
 #          username: sohot8653
