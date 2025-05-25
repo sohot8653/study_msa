@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: config-service
+  profiles:
+    active: native
   rabbitmq:
     host: 127.0.0.1
     port: 5672
@@ -12,13 +14,15 @@ spring:
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/sohot8653/st-framework.git
-          username: sohot8653
-          password: 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
-          default-label: master
-          search-paths:
-          - outer/config-service/config-file
+        native:
+          searchLocations: classpath:/config-file
+#        git:
+#          uri: https://github.com/sohot8653/st-framework.git
+#          username: sohot8653
+#          password: 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
+#          default-label: master
+#          search-paths:
+#          - outer/config-service/config-file
 management:
   endpoints:
     web:
