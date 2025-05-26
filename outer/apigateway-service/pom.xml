@@ -10,7 +10,8 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>apigateway-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
+    <!--<version>0.0.1-SNAPSHOT</version>-->
     <name>apigateway-service</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -31,6 +32,7 @@
         <dependency>
 		    <groupId>org.projectlombok</groupId>
 		    <artifactId>lombok</artifactId>
+		    <version>1.18.30</version>
 		    <scope>provided</scope>
 		</dependency>
 		
