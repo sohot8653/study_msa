@@ -48,9 +48,10 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+		  <groupId>org.projectlombok</groupId>
+		  <artifactId>lombok</artifactId>
+		  <version>1.18.32</version> <!-- 2025년 기준 최신 버전 확인 -->
+		  <scope>provided</scope>
 		</dependency>
 		
 		<dependency>
